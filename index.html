@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Food Order Form</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <form action="thankyou.html" method="post" id="orderForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter Your Name" required onchange="validateName()"><br>
+            <span id="nameError" class="error"></span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example12@gmail.com" required onchange="validateEmail()"><br>
+            <span id="emailError" class="error"></span>
+
+            <label for="mob">Mobile:</label>
+            <input type="tel" id="mob" name="mob" required onchange="validateMobile()"><br>
+            <span id="mobError" class="error"></span>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required onchange="validateAddress()"><br>
+            <span id="addressError" class="error"></span>
+
+            <table id="itemTable">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            
+            <input type="text" id="foodItem" placeholder="Enter food item">
+            <div id="error" style="color: red;"></div>
+            <button id="addItem" type="button">Add Item</button>
+
+            <label for="userCaptcha">Captcha:</label>
+            <span id="captcha"></span><br>
+            <button type="button" onclick="generateCaptcha()">Refresh</button><br>
+            <input type="text" id="userCaptcha" name="userCaptcha" required onchange="validateCaptcha()"><br>
+            <span id="captchaError" class="error"></span>
+            <input type="submit" value="Submit" onclick="return validateForm()">
+        </form>
+        <script src="javascript/index.js"></script>
+    </body>
+</html>
