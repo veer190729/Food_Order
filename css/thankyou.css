@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(164, 205, 211);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+h1 {
+    background-color: rgb(146, 209, 188);
+    color: #3991df;
+    font-size: 2em;
+    border: 2px solid #464040;
+    padding: 20px;
+    border-radius: 20px;
+}
